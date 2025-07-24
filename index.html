@@ -1,77 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <!-- ===== META ===== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Naman Sharma | Frontend developer portfolio showcasing responsive web projects including a Typing Speed Test app with real-time WPM, CPM, and accuracy tracking." />
+  <title>Naman | Portfolio</title>
+
+  <!-- ===== ICONS / FONTS ===== -->
+  <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- ===== STYLES ===== -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ===== FAVICON ===== -->
+  <link rel="icon" href="assets/favicon.png" />
 </head>
-<body>
-    <header>
-        <h1>Naman Sharma</h1>
-        <p>Web Developer | Programmer | Designer</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am 2nd year student of DTU pursuing b-tech in Information Technology. </p>
-        
-        <br>
-        <hr>
-        <br>
+<body data-theme="light">
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#home">Skip to content</a>
 
-        <h2>Skills</h2>
-        <p><b>Technical Skills:</b> DSA, OOPS, DBMS, OS</p>	 
-        <p><b>Programming Languages:</b> C++, C , Python</p>
-        <p><b>Programming Languages:</b> HTML, CSS </p>
-        <p><b>Programming Languages:</b> Git, MySql, VsCode </p>
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary">
+      <div class="logo">Naman<span>.</span></div>
 
-        <br>
-        <hr>
-        <br>
+      <!-- Dark Mode Toggle -->
+      <button
+        id="themeToggle"
+        class="theme-toggle"
+        aria-label="Toggle dark mode"
+        title="Toggle dark / light theme">
+        <i class="uil uil-moon"></i>
+      </button>
 
-        <h2>Positions of Responsibility</h2>
-        <p><b>As Student Post of Co-head in Paryavarnam .</b></p>
-        <p>Being the Tech Co-Head  conducted recruitments, managed juniors and contributed in building the website for Paryavarnam society.</p>
-        
-        <br>
-        <hr>
-        <br>
+      <!-- Mobile Menu Toggle -->
+      <button
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="navMenu"
+        aria-label="Toggle navigation menu">
+        <i class="uil uil-bars"></i>
+      </button>
 
-        <h2>Coding profiles</h2>
-        <p><a href=https://leetcode.com/u/Naman_Sharmaa/ >Leetcode</a></p>
-        <p><a href=https://www.naukri.com/code360/profile/3e45971b-c14e-479b-af28-e7382ef1e338 >Naukri (Code 360)</a></p>
-        <p><a href=https://www.geeksforgeeks.org/user/srmanao4b3/ >GFG</a></p>
-        
-    
-    
-    </section>
+      <!-- Nav Menu -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="active" role="menuitem">Home</a></li>
+        <li><a href="#about" role="menuitem">About</a></li>
+        <li><a href="#projects" role="menuitem">Projects</a></li>
+        <li><a href="#contact" role="menuitem">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <hr>
-    
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project  ">
-            <h3>Project 1</h3>
-            <p>Here is my portfolio built using HTML.</p>
-            <a href="https://namansharma76.github.io/html.portfolio/">Naman's Portfolio</a>
-    </section>
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home" aria-labelledby="heroTitle">
+    <div class="hero-text">
+      <h1 id="heroTitle">Hi, I'm Naman</h1>
+      <h2><span class="typedText" aria-live="polite"></span></h2>
+      <p>I build responsive, engaging, and delightful web experiences.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn primary">Hire Me</a>
+        <a
+          href="https://drive.google.com/drive/folders/1eNTzwNiu5_ONeJgvDnh6o_t-00sCrFdu?usp=drive_link"
+          class="btn outline"
+          target="_blank"
+          rel="noopener noreferrer">
+          Download CV
+        </a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/naman.jpg" alt="Illustration of Naman" loading="lazy"/>
+    </div>
+  </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/naman-sharma-99ba43288/">Naman Sharma</a></p>
-        <p>GitHub: <a href="https://github.com/NamanSharma76">Naman Github</a></p>
-    </section>
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about" aria-labelledby="aboutTitle">
+    <div class="section-header">
+      <h2 id="aboutTitle">About Me</h2>
+      <p>Who I Am</p>
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          I'm a frontend developer who loves creating beautiful, performant experiences using HTML, CSS, JavaScript, and modern libraries like React. I also have a strong computer science foundation that helps me write clean, efficient, and scalable code.
+        </p>
+        <ul class="skills">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>DSA</li>
+          <li>C/C++</li>
+          <li>OOPS</li>
+          <li>DBMS</li>
+          <li>OS</li>
+          <li>Tableau</li>
+        </ul>
+      </div>
+      
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; Naman Sharma. All Rights Reserved.</p>
-    </footer>
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects" id="projects" aria-labelledby="projectsTitle">
+    <div class="section-header">
+      <h2 id="projectsTitle">Projects</h2>
+      <p>What I’ve Built</p>
+    </div>
+    <div class="project-grid">
+
+      <!-- Project 1 -->
+      <article class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A fully responsive, animated personal portfolio built with semantic HTML, modern CSS (flex + grid), and vanilla JS for interactivity.</p>
+        <ul class="project-points">
+          <li>Optimized for mobile, tablet & desktop.</li>
+          <li>Smooth scroll + active nav highlight.</li>
+          <li>Accessible, keyboard-friendly nav.</li>
+        </ul>
+        <a href="#home" class="project-link">You're here →</a>
+      </article>
+
+      <!-- Project 2: Typing Speed Test -->
+      <article class="project-card">
+        <h3>Typing Speed Test</h3>
+        <p>Interactive typing trainer with real-time performance stats and a large library of practice content.</p>
+        <ul class="project-points">
+          <li>Tracks WPM, CPM, accuracy & mistakes live.</li>
+          <li>Character-by-character DOM feedback.</li>
+          <li>Dark mode + mobile-first responsive UI.</li>
+          <li>Modular JS: game logic, timer, analytics.</li>
+          <li>50+ test paragraphs for realistic practice.</li>
+        </ul>
+        <a
+          href="https://namansharma76.github.io/Typing-Speed-Test/"
+          class="project-link"
+          target="_blank"
+          rel="noopener noreferrer">
+          View Project ↗
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact" aria-labelledby="contactTitle">
+    <div class="section-header">
+      <h2 id="contactTitle">Contact Me</h2>
+      <p>Let’s Work Together</p>
+    </div>
+
+    <!-- Direct Email -->
+    <div class="direct-email">
+      <p>
+        Prefer email? Reach me directly at
+        <a href="mailto:srmanaman76@gmail.com">srmanaman76@gmail.com</a>
+      </p>
+    </div>
+    <div class="contact__content">
+      <h3 class="contact__subtitle" style="text-align: center; margin-top: 2rem;">
+        Or use the form
+      </h3>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdGoX9vFaGd1WAObnmGgmVN_wfWozdbTraIn1Fwpgdox5wy4A/viewform?embedded=true"
+        width="100%"
+        height="400"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        style="border: none; border-radius: 10px;"
+        loading="lazy"
+      >
+        Loading…
+      </iframe>
+    </div>
+
+
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Naman. All rights reserved.</p>
+    <p>
+      <a href="mailto:srmanaman76@gmail.com" class="footer-mail">srmanaman76@gmail.com</a>
+    </p>
+    <div class="footer-icons">
+      <a href="https://www.linkedin.com/in/naman-sharma-99ba43288/" aria-label="LinkedIn"><i class="uil uil-linkedin-alt"></i></a>
+      <a href="https://github.com/NamanSharma76" aria-label="GitHub"><i class="uil uil-github-alt"></i></a>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
